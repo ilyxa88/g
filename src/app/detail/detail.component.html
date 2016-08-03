@@ -1,0 +1,123 @@
+<div class="container ftr-bottom">
+  <div class="left-bar col-sm-6">
+    <div class="cust-carousel">
+      <div class="carousel-view">
+        <div *ngIf="bigImage" class="big-img" style="background-image:url('{{bigImage}}')">
+        </div>
+      </div>
+      <!--<slick *ngIf="enabled_slick" settings="slickConfig" autoplay="true" infinite="true" autoplay-speed="3000" arrows="false" lazy-load="ondemand" afterChange="slickChange(slick)" slides-to-show="3" slides-to-scroll="1" responsive="breakpoints" class="slider row cust-slider">-->
+        <!--<div class="single-item" ng-repeat="i in deal.photos">-->
+          <!--<div ng-click="setBigImg(i)" class="carousel-view-sm">-->
+            <!--<div class="sm-img" style="background-image:url('{{i}}')">-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</slick>-->
+    </div>
+    <div class="pay-panel col-sm-12">
+      <div class="wrap-btn">
+        <button class="btn-pay" (click)="lgModal.show()"><i class="fa fa-usd" aria-hidden="true"></i>Pay</button>
+        <!--<span class="info-tooltip" tooltip-placement="right-top" uib-tooltip="Help"><i class="fa fa-question-circle" aria-hidden="true"></i></span>-->
+      </div>
+    </div>
+  </div>
+  <div class="right-bar col-sm-5 col-sm-offset-1">
+    <h1>test</h1>
+    <form action="">
+      <div *ngIf="true" class="form-group">
+        <label for="description">Discount <span style="color:red">-23%</span></label>
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <span class="help-block">error</span>
+      </div>
+      <div class="form-group">
+        <label for="address" class="not-m">Address</label>
+        <span class="help-block">error</span>
+        <!--<ng-map draggable="false" scrollwheel="false" default-style="true" zoom="12" center="{{deal.address}}">-->
+          <!--<info-window id="myInfoWindow">-->
+            <!--<div ng-non-bindable>-->
+              <!--<h4>{{selectedCity.name}}</h4>-->
+            <!--</div>-->
+          <!--</info-window>-->
+          <!--<marker ng-repeat="c in cities" position="{{c.pos}}" title="{{c.name}}" id="{{c.id}}" on-click="showCity(event, c)">-->
+          <!--</marker>-->
+        <!--</ng-map>-->
+      </div>
+      <div class="form-group">
+        <label for="list" class="">Opening Hours</label>
+        <ul class="list-open">
+          <li *ngFor="let lo of [1,23,4,5,67]">
+            <p>{{lo}}
+              <time>{{lo}}</time>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </form>
+  </div>
+
+  <!-- Pay modal -->
+  <div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="pay-form clearfix">
+          <button class="btn-close" (click)="lgModal.hide()" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></button>
+          <form name="frm_pay" >
+            <div class="row m-bottom">
+              <div class="form-group col-sm-12">
+                <h1>Information personnel</h1>
+              </div>
+              <div class="form-group col-sm-2">
+                <label for="" class="hidden">M/F</label>
+                <select ng-disabled="processing"  class="form-control">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                </select>
+              </div>
+              <div class="form-group col-sm-5 has-feedback">
+                <label for="" class="hidden">Last name</label>
+                <input type="text"  required placeholder="Last name" name="last_name" class="form-control">
+              </div>
+              <div class="form-group col-sm-5 has-feedback" >
+                <label for="" class="hidden">First name</label>
+                <input type="text" required  placeholder="First name" name="first_name" class="form-control">
+              </div>
+              <div class="form-group col-sm-12 has-feedback" >
+                <label for="" class="hidden">Address</label>
+                <input  required type="text" placeholder="Address" name="address" class="form-control">
+
+              </div>
+              <div class="form-group col-sm-6 has-feedback">
+                <label for="" class="hidden">Postal Code</label>
+                <input type="text"  placeholder="Postal Code" name="postalCode"  class="form-control" required>
+              </div>
+              <div class="form-group col-sm-6 has-feedback" >
+                <label for="" class="hidden">City</label>
+                <input type="text"  placeholder="City" name="city"  class="form-control" required>
+              </div>
+              <div class="form-group col-sm-12 has-feedback" ng-class="{ 'has-success' : frm_pay.email.$valid,'has-error': frm_pay.email.$invalid&&frm_pay.email.$dirty}">
+                <label for="" class="hidden">Email</label>
+                <input  required type="email" ng-model="payment.email" placeholder="EMAIL" name="email" class="form-control">
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="checkbox checkbox-success col-sm-12 has-feedback" ng-class="{ 'has-success' : frm_pay.accept.$valid,'has-error': frm_pay.accept.$invalid&&frm_pay.accept.$dirty}">
+                <input  name="accept" required type="checkbox" id="checkbox1" value="option">
+                <label for="checkbox1">By clicking, you accept the terms of sales</label>
+              </div>
+              <div class="form-group-btn col-sm-12">
+                <div class="wrap-btn">
+                  <button class="btn-pay">Pay
+                  </button>
+                  <span class="info-tooltip" ><i class="fa fa-question-circle" aria-hidden="true"></i></span>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

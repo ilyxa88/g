@@ -1,0 +1,47 @@
+<div class="container-fluid main" fullMain>
+  <!--<div class="container-fluid main" mainfull>-->
+  <div class="content-list-box col-sm-7">
+    <div class="header-panel clearfix">
+      <div class="search-panel col-xs-7 col-sm-7 col-md-8 col-lg-9">
+        <form class="form-wrapper">
+          <label for="">
+            <input type="text" id="search" class="input-search" placeholder="Address city metro" required>
+            <i  class="btn-search gradient" role="button"></i>
+          </label>
+        </form>
+      </div>
+      <div class="pay-panel col-xs-5 col-sm-5 col-md-4 col-lg-3">
+        <button class="btn-pay"><i class="fa fa-usd" aria-hidden="true"></i>Pay</button>
+        <!--<div class="wrap-tooltip">-->
+          <!--<button class="btn-tooltip" tooltip-placement="bottom-left" uib-tooltip="text text text text text..."><i class="fa fa-question-circle" aria-hidden="true"></i></button>-->
+        <!--</div>-->
+
+      </div>
+
+    </div>
+    <div class="list-panel">
+      <div class="box-info col-xs-6 col-sm-6 brand__item"  *ngFor="let movie of [1,2,3,4,5,6]">
+        <a [routerLink]="['/detail']">
+          <div class="box-view">
+            <div class="discount-icon"><span>28%</span></div>
+            <div class="box-img v-1">
+              <span class="discounts">-26%</span>
+            </div>
+          </div>
+          <h1>test</h1>
+          <p>text text text</p>
+        </a>
+      </div>
+      <div class="list-pagination" >
+        <pagination [totalItems]="bigTotalItems" [(ngModel)]="bigCurrentPage" [maxSize]="maxSize" class="pagination-sm"
+        [boundaryLinks]="true" [rotate]="false" (numPages)="numPages = $event"></pagination>
+      </div>
+    </div>
+  </div>
+  <div class="container-map col-sm-5">
+    <!--<ng2-map [center]="Minsk" class="container-map"></ng2-map>-->
+    <google-map  style="width: 100px; height: 100px">
+      <google-map-marker [position]="{lat: -34.397, lng: 150.644}"></google-map-marker>
+    </google-map>
+  </div>
+</div>

@@ -9,10 +9,28 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  'angular2-google-maps': 'vendor/angular2-google-maps',
+  'moment': 'vendor/moment/moment.js',
+  'ng2-bootstrap': 'vendor/ng2-bootstrap',
+  'ng2-map': 'vendor/ng2-map/dist'
 };
 
 /** User packages configuration. */
 const packages: any = {
+  'angular2-google-maps/core': {
+    defaultExtension: 'js',
+    main: 'index.js' // you can also use core.umd.js here, if you want faster loads
+  },
+  'ng2-bootstrap': {
+    defaultExtension: 'js'
+  },
+  'ng2-map':{ 
+    main: 'index.js', 
+    defaultExtension: 'js' 
+  },
+  'moment':{
+     format: 'cjs'
+  }
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
