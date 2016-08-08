@@ -33,15 +33,13 @@
         </a>
       </div>
       <div class="list-pagination" >
-        <pagination [totalItems]="bigTotalItems" [(ngModel)]="bigCurrentPage" [maxSize]="maxSize" class="pagination-sm"
-        [boundaryLinks]="true" [rotate]="false" (numPages)="numPages = $event"></pagination>
+        <!--<pagination [totalItems]="bigTotalItems" [(ngModel)]="bigCurrentPage" [maxSize]="maxSize" class="pagination-sm"-->
+        <!--[boundaryLinks]="true" [rotate]="false" (numPages)="numPages = $event"></pagination>-->
       </div>
     </div>
   </div>
   <div class="container-map col-sm-5">
     <!--<ng2-map [center]="Minsk" class="container-map"></ng2-map>-->
-    <google-map  style="width: 100px; height: 100px">
-      <google-map-marker [position]="{lat: -34.397, lng: 150.644}"></google-map-marker>
-    </google-map>
+    <my-maps-project-app ></my-maps-project-app>
   </div>
 </div>

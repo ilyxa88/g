@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import {ElementRef} from "@angular/core";
-import { NG2_MAP_DIRECTIVES, Ng2MapComponent } from "ng2-map";
-import {PAGINATION_DIRECTIVES} from 'ng2-bootstrap';
+//import { NG2_MAP_DIRECTIVES, Ng2MapComponent } from "ng2-map";
+import { MyMapsProjectAppComponent } from '../my-maps-project.component'
+import {PAGINATION_DIRECTIVES} from 'ng2-bootstrap/ng2-bootstrap';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 import {FullMainDirective} from '../shared/directive/full-main.directive';
-import {SebmGoogleMap} from 'angular2-google-maps/core/index';
+
+//import {FullMainDirective} from '../shared/directive/full-main.directive';
+//import {SebmGoogleMap} from 'angular2-google-maps/core/index';
 /**
  * This class represents the lazy loaded HomeComponent.
  */
@@ -13,7 +16,8 @@ import {SebmGoogleMap} from 'angular2-google-maps/core/index';
   selector: 'quileo-main',
   templateUrl: 'main.component.html',
   styleUrls: ['main.component.css'],
-  directives: [FullMainDirective, PAGINATION_DIRECTIVES, ROUTER_DIRECTIVES, SebmGoogleMap]
+  directives: [ROUTER_DIRECTIVES, PAGINATION_DIRECTIVES, MyMapsProjectAppComponent, FullMainDirective]
+ // directives: [FullMainDirective, PAGINATION_DIRECTIVES, ROUTER_DIRECTIVES, SebmGoogleMap]
 })
 export class MainComponent implements OnInit {
 
