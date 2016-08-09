@@ -1,0 +1,7 @@
+.full-image{
+  display: none;
+  text-align: center;
+}
+.full-image.active{
+  display: block;
+}

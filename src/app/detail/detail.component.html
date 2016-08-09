@@ -1,10 +1,7 @@
 <div class="container ftr-bottom" style="height: 100%;">
   <div class="left-bar col-sm-6">
     <div class="cust-carousel">
-      <div class="carousel-view">
-        <div *ngIf="bigImage" class="big-img" style="background-image:url('{{bigImage}}')">
-        </div>
-      </div>
+      <slide-show class="slider-show"></slide-show>
       <!--<slick *ngIf="enabled_slick" settings="slickConfig" autoplay="true" infinite="true" autoplay-speed="3000" arrows="false" lazy-load="ondemand" afterChange="slickChange(slick)" slides-to-show="3" slides-to-scroll="1" responsive="breakpoints" class="slider row cust-slider">-->
         <!--<div class="single-item" ng-repeat="i in deal.photos">-->
           <!--<div ng-click="setBigImg(i)" class="carousel-view-sm">-->
@@ -56,7 +53,6 @@
       </div>
     </form>
   </div>
-
   <!-- Pay modal -->
   <div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

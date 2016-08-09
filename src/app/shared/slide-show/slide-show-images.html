@@ -1,0 +1,3 @@
+<div class="album carousel-view">
+  <slide-show-image class="big-img" *ngFor="#pic of pics; #i=index" [pic]="pic" class="full-image" [ngClass]="{active : isCurrent(i)}"></slide-show-image>
+</div>

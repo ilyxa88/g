@@ -1,0 +1,9 @@
+<div class="album">
+    <div *ngFor="#pic of pics; #i=index"
+         class="pull-left preview "
+         style="width: 33.333%;"
+         [ngClass]="{active : isCurrent(i)}"
+         (click)="resetCurrent(i)">
+        <slide-show-preview [pic]="pic"  [ngClass]="{true: 'slide-preview slide-show', false: 'slide-preview'}[getCurrent(current,i)]">{{i}}_{{current}}</slide-show-preview>
+    </div>
+</div>

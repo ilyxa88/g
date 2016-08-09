@@ -17089,3 +17089,68 @@ html, body {
 quileo-detail{
   height: 100%;
 }
+
+/*Slide show*/
+slide-show-images, slide-show, slide-show-image, .album, .slide-img {
+  height:100%;
+  display: block;
+  background-size: cover;
+}
+
+.slider-show input[type="number"] {
+  width: 50px;
+  font-size: 25px;
+}
+.slider-show img{
+  width: 100%;
+  max-width: 1024px;
+}
+.slider-show header{
+  display: block;
+  padding: 5px;
+}
+.slider-show .control{
+  float: left;
+  display: block;
+  width: 100%;
+  height: 80px;
+}
+.slider-show .pull-left{
+  float: left;
+}
+.slider-show .pull-right{
+  float: right;
+}
+.slider-show .preview{
+  cursor: pointer;
+}
+.slider-show .preview.active{
+  background-color: #999;
+}
+.slider-show .preview-img{
+  margin: 10px 0;
+  width: 100%;
+}
+.slider-show .full-image{
+  display: none;
+  text-align: center;
+}
+.slider-show .full-image.active{
+  display: block;
+}
+
+.slider-show .text-center{
+  text-align: center;
+}
+.slider-show .slide-preview{
+  display: none;
+}
+.slider-show .slide-show{
+  display: block;
+}
+.slider-show:after{
+  content: '';
+  height:0;
+  visibility: hidden;
+  clear: both;
+}
