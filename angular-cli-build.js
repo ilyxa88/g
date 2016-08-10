@@ -19,6 +19,7 @@ module.exports = function(defaults) {
       'angular2-google-maps/**/*.+(js|js.map)',
       'ng2-bootstrap/**/*',
       'ng2-map/**/*',
+      'slick-carousel/**/*.js',
       'moment/moment.js'
     ]
   });

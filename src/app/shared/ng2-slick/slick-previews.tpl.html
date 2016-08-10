@@ -1,0 +1,7 @@
+<div *ngFor="#pic of data; #i=index"
+     class="single-item">
+  <div  class="carousel-view-sm">
+    <div class="sm-img" [ngStyle]="{'background-image': 'url(' + pic + ')'}">
+    </div>
+  </div>
+</div>

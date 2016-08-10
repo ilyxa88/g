@@ -16328,10 +16328,12 @@ html, body {
   }
 }
 /* line 49, ../../app/styles/pages/_detail.scss */
-.cust-carousel .sm-img, .cust-carousel .big-img {
+.sm-img,.cust-carousel .sm-img, .cust-carousel .big-img {
   position: relative;
   width: 100%;
   height: 100%;
+  min-height: 100px;
+  min-width: 100px;
   background-size: cover;
   background-position: center center;
 }
@@ -17154,3 +17156,4 @@ slide-show-images, slide-show, slide-show-image, .album, .slide-img {
   visibility: hidden;
   clear: both;
 }
+
