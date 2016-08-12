@@ -18,4 +18,4 @@ bootstrap(AppComponent, [
   //provideLazyMapsAPILoaderConfig({ apiKey: 'AIzaSyAUgZllwEi6visiQWw9qGyOYMhTVWFY6k8', clientId: 'myClientId' }),
   APP_ROUTER_PROVIDERS,
   GOOGLE_MAPS_PROVIDERS
-]);
+]).catch(err => console.error(err));

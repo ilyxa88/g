@@ -16,7 +16,7 @@ import {SlickComponent} from '../shared/ng2-slick/slick';
 })
 export class DetailComponent implements OnInit {
 
-
+  public data:Array<string> = [];
   /**
    * Creates an instance of the HomeComponent with the injected
    * NameListService.
@@ -29,8 +29,22 @@ export class DetailComponent implements OnInit {
    * Get the names OnInit
    */
   ngOnInit() {
-
+    this.init();
   }
 
-
+  init(){
+    var nameOfPicFolder = './assets/images/p';
+    var noOfPics = 17;
+    var counter = 1;
+    while (counter <= noOfPics) {
+      this.data.push(nameOfPicFolder+'/Bild_'+counter+'_sm.jpg');
+      counter++;
+    }
+    console.log(this.data);
+  }
+  addPic(){
+    setTimeout(()=>{
+      this.data.push('./assets/images/p/Bild_16_sm.jpg')
+    }, 1000);
+  }
 }

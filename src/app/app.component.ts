@@ -20,4 +20,5 @@ export class AppComponent {
   	console.log('Config environment', environment);
     //Ng2MapComponent['apiUrl'] = "https://maps.google.com/maps/api/js?key=AIzaSyBc-mGvim3wNwXBqp9bdJLGHeunGEBmfw0";
   }
+
 }

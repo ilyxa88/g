@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 
 /**
@@ -11,4 +11,8 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
   styleUrls: ['navbar.component.css'],
   directives: [ROUTER_DIRECTIVES]
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  ngOnChanges(){
+  }
+
+}
